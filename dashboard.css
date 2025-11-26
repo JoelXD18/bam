@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eaf3ff;
+}
+
+/* TOP BAR */
+.topbar {
+    background: #fff;
+    padding: 12px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    width: 50px;
+}
+
+/* MENU ICON */
+.menu-icon {
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* SIDEBAR */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: white;
+    padding: 20px;
+    box-shadow: -3px 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar h3 {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    display: block;
+    margin: 12px 0;
+    text-decoration: none;
+    color: #0055A4;
+    font-size: 16px;
+}
+
+.sidebar .exit {
+    color: red;
+    margin-top: 20px;
+}
+
+/* CONTENT */
+.content {
+    padding: 20px;
+}
+
+.card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    margin-bottom: 25px;
+}
+
+/* TU ACTIVIDAD */
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.stat-box {
+    background: #f3f8ff;
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.stat-box h3 {
+    color: #0055A4;
+}
+
+/* GRUPOS Y ACTIVIDADES */
+.group, .activity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f7faff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 12px;
+}
+
+.btn-ver {
+    background: #2ecc71;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* BOTTOM NAV */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 12px 0;
+    box-shadow: 0 -3px 15px rgba(0,0,0,0.1);
+}
+
+.bottom-nav a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #888;
+}
+
+.bottom-nav .active {
+    color: #0055A4;
+}
+

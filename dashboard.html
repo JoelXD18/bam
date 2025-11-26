@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel Voluntariado</title>
+    <link rel="icon" type="image/jpeg" href="logobam.jpg">
+    <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <div id="sidebar" class="sidebar">
+        <h3>Menú</h3>
+        <a href="#">Perfil</a>
+        <a href="#">Ayuda y asistencia</a>
+        <a href="#">Impacto sostenible</a>
+        <a href="#">Ajustes</a>
+        <a href="login.html" class="exit">Cerrar sesión</a>
+    </div>
+
+    <!-- CABECERA -->
+    <header class="topbar">
+        <img src="logobam.jpg" class="logo">
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    </header>
+
+    <main class="content">
+
+        <!-- TU ACTIVIDAD -->
+        <section class="card">
+            <h2>Tu actividad</h2>
+
+            <div class="stats">
+                <div class="stat-box">
+                    <h3>34h</h3>
+                    <p>Horas realizadas</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>120kg</h3>
+                    <p>Kilos entregados</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>48km</h3>
+                    <p>Km recorridos</p>
+                </div>
+
+                <div class="stat-box">
+                    <h3>7</h3>
+                    <p>Voluntariados</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GRUPOS ACTIVOS -->
+        <section class="card">
+            <h2>Grupos activos</h2>
+
+            <div class="group">
+                <div>
+                    <h3>Grupo Norte</h3>
+                    <p>12 usuarios</p>
+                </div>
+                <button class="btn-ver">Ver</button>
+            </div>
+
+            <div class="group">
+                <div>
+                    <h3>Grupo Centro</h3>
+                    <p>19 usuarios</p>
+                </div>
+                <button class="btn-ver">Ver</button>
+            </div>
+
+            <div class="group">
+                <div>
+                    <h3>Grupo Sur</h3>
+                    <p>9 usuarios</p>
+                </div>
+                <button class="btn-ver">Ver</button>
+            </div>
+        </section>
+
+        <!-- PRÓXIMAS ACTIVIDADES -->
+        <section class="card">
+            <h2>Próximas actividades</h2>
+
+            <div class="activity">
+                <div>
+                    <h3>Recolección Alimentos</h3>
+                    <p>Mañana - 10:00h</p>
+                </div>
+                <button class="btn-ver">Ver</button>
+            </div>
+
+            <div class="activity">
+                <div>
+                    <h3>Reparto Banco Sur</h3>
+                    <p>Viernes - 17:00h</p>
+                </div>
+                <button class="btn-ver">Ver</button>
+            </div>
+
+            <div class="activity">
+                <div>
+                    <h3>Clasificación</h3>
+                    <p>Sábado - 09:30h</p>
+                </div>
+                <button class="btn-ver">Ver</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BARRA INFERIOR -->
+    <nav class="bottom-nav">
+        <a class="active">🏠</a>
+        <a href="crear.html">➕</a>
+        <a href="ranking.html">👑</a>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>

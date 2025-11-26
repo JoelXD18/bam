@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro - Banco de Alimentos de Madrid</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/jpeg" href="logobam.jpg">
+
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="logobam.jpg" class="logo" />
+
+            <h2>Registro</h2>
+
+            <input type="text" placeholder="Nombre" class="input" />
+            <input type="text" placeholder="Apellidos" class="input" />
+            <input type="number" placeholder="Edad" class="input" />
+            <input type="text" placeholder="Intereses (opcional)" class="input" />
+
+            <input type="text" placeholder="Nombre de usuario" class="input" />
+            <input type="password" placeholder="Contraseña" class="input" id="pass1" />
+            <input type="password" placeholder="Repetir contraseña" class="input" id="pass2" />
+
+            <button class="btn" onclick="validarRegistro()">Registrarse</button>
+
+            <p class="register-text">
+                ¿Ya tienes cuenta?
+                <a href="login.html">Inicia sesión</a>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function validarRegistro() {
+            const p1 = document.getElementById("pass1").value;
+            const p2 = document.getElementById("pass2").value;
+
+            if (p1 !== p2) {
+                alert("Las contraseñas no coinciden");
+            } else {
+                alert("¡Registro completado!");
+            }
+        }
+    </script>
+</body>
+</html>
