@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crear Grupo Voluntariado</title>
+    <link rel="icon" type="image/jpeg" href="logobam.jpg">
+    <link rel="stylesheet" href="dashboard.css" />
+    <style>
+        /* Estilos de formulario integrados */
+        .card form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .card form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #0055A4;
+        }
+
+        .card form input,
+        .card form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #cfd9e6;
+            border-radius: 12px;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .card form input:focus,
+        .card form textarea:focus {
+            outline: none;
+            border-color: #0055A4;
+            box-shadow: 0 0 5px rgba(0,85,164,0.3);
+        }
+
+        .card form textarea {
+            resize: none;
+        }
+
+        .btn-ver {
+            background: #0055A4;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-ver:hover {
+            background: #00498F;
+        }
+
+        /* Código generado */
+        .codigo-grupo {
+            margin-top: 20px;
+            font-size: 36px;
+            color: #0055A4;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <div id="sidebar" class="sidebar">
+        <h3>Menú</h3>
+        <a href="dashboard.html">Panel</a>
+        <a href="#">Perfil</a>
+        <a href="#">Ayuda y asistencia</a>
+        <a href="#">Impacto sostenible</a>
+        <a href="#">Ajustes</a>
+        <a href="index.html" class="exit">Cerrar sesión</a>
+    </div>
+
+    <!-- CABECERA -->
+    <header class="topbar">
+        <img src="logobam.jpg" class="logo">
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    </header>
+
+    <main class="content">
+
+        <!-- CREAR GRUPO -->
+        <section class="card">
+            <h2>Crear Nuevo Grupo</h2>
+
+            <form id="form-crear-grupo">
+
+                <label>Nombre del grupo</label>
+                <input type="text" placeholder="Ej: Grupo Norte" required>
+
+                <label>Número máximo de participantes</label>
+                <input type="number" placeholder="Ej: 20" min="1" required>
+
+                <label>Límite de edad</label>
+                <input type="text" placeholder="Ej: 18-60 años" required>
+
+                <label>Fecha</label>
+                <input type="date" required>
+
+                <label>Hora</label>
+                <input type="time" required>
+
+                <label>Lugar</label>
+                <input type="text" placeholder="Dirección del voluntariado" required>
+
+                <label>Propósito de la actividad</label>
+                <textarea placeholder="Describe el propósito..." rows="4" required></textarea>
+
+                <button type="submit" class="btn-ver">Crear Grupo</button>
+
+            </form>
+
+            <!-- Código generado -->
+            <div id="codigo-generado" class="codigo-grupo" style="display:none;"></div>
+        </section>
+
+    </main>
+
+    <!-- BARRA INFERIOR -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html">🏠</a>
+        <a class="active">➕</a>
+        <a href="ranking.html">👑</a>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("open");
+        }
+
+        function generarCodigo() {
+            // Genera un código aleatorio de 6 caracteres alfanuméricos
+            const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+            let codigo = '';
+            for (let i = 0; i < 6; i++) {
+                codigo += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return codigo;
+        }
+
+        document.getElementById("form-crear-grupo").addEventListener("submit", function(e) {
+            e.preventDefault();
+            // Oculta el formulario
+            this.style.display = 'none';
+            // Muestra el código generado
+            const codigoDiv = document.getElementById("codigo-generado");
+            codigoDiv.innerText = generarCodigo();
+            codigoDiv.style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>

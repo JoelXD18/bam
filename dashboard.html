@@ -6,6 +6,31 @@
     <title>Panel Voluntariado</title>
     <link rel="icon" type="image/jpeg" href="logobam.jpg">
     <link rel="stylesheet" href="dashboard.css" />
+    <style>
+        /* Estilo ODS dentro de tu actividad */
+        .ods-list {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .ods-item {
+            background: #f3f8ff;
+            padding: 8px 12px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #0055A4;
+        }
+
+        .tick {
+            color: green;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,6 +77,13 @@
                     <h3>7</h3>
                     <p>Voluntariados</p>
                 </div>
+            </div>
+
+            <!-- ODS cumplidas -->
+            <div class="ods-list">
+                <div class="ods-item">ODS7 <span class="tick">✔</span></div>
+                <div class="ods-item">ODS12 <span class="tick">✔</span></div>
+                <div class="ods-item">ODS13 <span class="tick">✔</span></div>
             </div>
         </section>
 
@@ -118,7 +150,7 @@
     <!-- BARRA INFERIOR -->
     <nav class="bottom-nav">
         <a class="active">🏠</a>
-        <a href="crear.html">➕</a>
+        <a href="crear_grupo.html">➕</a>
         <a href="ranking.html">👑</a>
     </nav>
 
@@ -130,4 +162,3 @@
 
 </body>
 </html>
-

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ranking Voluntariado</title>
+    <link rel="icon" type="image/jpeg" href="logobam.jpg">
+    <link rel="stylesheet" href="dashboard.css" />
+    <style>
+        /* Estilos para el ranking de usuarios */
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .ranking-card {
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+        }
+
+        .ranking-info {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .ranking-info h3 {
+            color: #0055A4;
+            margin-bottom: 5px;
+        }
+
+        .ranking-position {
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 10px;
+            color: #0055A4;
+        }
+
+        .stats-small {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .stat-box-small {
+            background: #f3f8ff;
+            padding: 8px 12px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .stat-box-small h4 {
+            margin: 0;
+            color: #0055A4;
+        }
+
+        .ods-list {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .ods-item {
+            background: #f3f8ff;
+            padding: 6px 10px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 14px;
+            color: #0055A4;
+        }
+
+        .tick {
+            color: green;
+            font-weight: bold;
+        }
+
+        .recompensa {
+            background: #d0e6ff;
+            color: #0055A4;
+            padding: 6px 10px;
+            border-radius: 12px;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU LATERAL -->
+    <div id="sidebar" class="sidebar">
+        <h3>Menú</h3>
+        <a href="dashboard.html">Panel</a>
+        <a href="#">Perfil</a>
+        <a href="#">Ayuda y asistencia</a>
+        <a href="#">Impacto sostenible</a>
+        <a href="#">Ajustes</a>
+        <a href="index.html" class="exit">Cerrar sesión</a>
+    </div>
+
+    <!-- CABECERA -->
+    <header class="topbar">
+        <img src="logobam.jpg" class="logo">
+        <span class="menu-icon" onclick="toggleMenu()">&#9776;</span>
+    </header>
+
+    <main class="content">
+
+        <section class="card">
+            <h2>Ranking de Voluntarios</h2>
+
+            <div class="ranking-list">
+
+                <!-- Usuario 1 -->
+                <div class="ranking-card">
+                    <div class="ranking-info">
+                        <h3><span class="ranking-position">1</span>@destro7ed - 1200 pts</h3>
+                        <div class="recompensa">Camiseta ABM + Descuentos</div>
+                        <div class="ods-list">
+                            <div class="ods-item">ODS7 <span class="tick">✔</span></div>
+                            <div class="ods-item">ODS12 <span class="tick">✔</span></div>
+                        </div>
+                        <div class="stats-small">
+                            <div class="stat-box-small"><h4>34h</h4>Horas</div>
+                            <div class="stat-box-small"><h4>120kg</h4>Kilos</div>
+                            <div class="stat-box-small"><h4>48km</h4>Km</div>
+                            <div class="stat-box-small"><h4>7</h4>Voluntariados</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usuario 2 -->
+                <div class="ranking-card">
+                    <div class="ranking-info">
+                        <h3><span class="ranking-position">2</span>@j03lr4m0s - 980 pts</h3>
+                        <div class="recompensa">Taza + Descuentos</div>
+                        <div class="ods-list">
+                            <div class="ods-item">ODS7 <span class="tick">✔</span></div>
+                        </div>
+                        <div class="stats-small">
+                            <div class="stat-box-small"><h4>28h</h4>Horas</div>
+                            <div class="stat-box-small"><h4>90kg</h4>Kilos</div>
+                            <div class="stat-box-small"><h4>36km</h4>Km</div>
+                            <div class="stat-box-small"><h4>5</h4>Voluntariados</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Usuario 3 -->
+                <div class="ranking-card">
+                    <div class="ranking-info">
+                        <h3><span class="ranking-position">3</span>@usuario3 - 850 pts</h3>
+                        <div class="recompensa">Descuentos</div>
+                        <div class="ods-list">
+                            <div class="ods-item">ODS12 <span class="tick">✔</span></div>
+                        </div>
+                        <div class="stats-small">
+                            <div class="stat-box-small"><h4>20h</h4>Horas</div>
+                            <div class="stat-box-small"><h4>75kg</h4>Kilos</div>
+                            <div class="stat-box-small"><h4>25km</h4>Km</div>
+                            <div class="stat-box-small"><h4>4</h4>Voluntariados</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- BARRA INFERIOR -->
+    <nav class="bottom-nav">
+        <a href="dashboard.html">🏠</a>
+        <a href="crear_grupo.html">➕</a>
+        <a class="active">👑</a>
+    </nav>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("sidebar").classList.toggle("open");
+        }
+    </script>
+
+</body>
+</html>
